@@ -1,6 +1,230 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: white;
+  padding: 10px 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-top h1 {
+  margin: 0;
+}
+
+.header-top .account {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 10px 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 200px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a {
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+  margin-right: 20px; /* Adjust spacing as needed */
+  font-size: larger;
+}
+
+/* Styling the right section of the nav bar */
+.nav-right {
+  display: flex;
+}
+
+.nav-right a {
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+  margin-left: 1200px; /* Adjust spacing as needed */
+}
+
+/* Menu items styling */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 100px; /* Adjust spacing between items */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.delorean-promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.delorean-promo img {
+  width: 600px;
+  height: auto;
+}
+
+.promo-text {
+  margin-left: 20px;
+}
+
+button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0077cc;
+}
+
+.upgrades-reviews {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.upgrades, .reviews {
+  width: 45%;
+}
+
+.upgrades h3, .reviews h3 {
+  text-align: center;
+}
+
+.upgrade-item {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.upgrade-item img {
+  width: 40px;
+  height: auto;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .header-top {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .header-top .account {
+      align-self: flex-end;
+      margin-top: 10px;
+  }
+
+  nav {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  nav a {
+      margin: 10px;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-left a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    margin-right: 20px; /* Adjust spacing as needed */
+    font-size: larger;
+  }
+  
+  /* Styling the right section of the nav bar */
+  .nav-right {
+    display: flex;
+  }
+  
+  .nav-right a {
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    margin-left: 500px; /* Adjust spacing as needed */
+  }
+  
+  /* Menu items styling */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 50px; /* Adjust spacing between items */
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+
+  .delorean-promo {
+      flex-direction: column;
+  }
+
+  .promo-text {
+      margin-left: 0;
+      margin-top: 20px;
+  }
+
+  .upgrades-reviews {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .upgrades, .reviews {
+      width: 100%;
+  }
 }
