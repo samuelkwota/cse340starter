@@ -35,7 +35,7 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 200px;
+  margin-left: 190px;
 }
 
 .nav-left {
@@ -47,7 +47,7 @@ nav a {
   color: rgb(7, 7, 7);
   text-decoration: none;
   margin-right: 20px; /* Adjust spacing as needed */
-  font-size: larger;
+  font-size: 30px;
 }
 
 /* Styling the right section of the nav bar */
@@ -117,7 +117,7 @@ button:hover {
 .upgrades-reviews {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .upgrades, .reviews {
