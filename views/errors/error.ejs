@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Adjust the path to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1><%= title %></h1>
+    </header>
+    <main>
+        <p>
+            <%- message %> <!-- Unescaped block to display the error message -->
+        </p>
+        <p>Don't worry, things like this happen sometimes. How about going back to the <a href="/">Home page</a>?</p>
+        <img src="/images/funny-404-image.png" alt="Funny Error Image"> <!-- Optionally add a funny image -->
+    </main>
+</body>
+</html>
