@@ -27,11 +27,7 @@ app.use(static)
 app.get("/", utilities.handleErrors(baseController.buildHome))
   // Inventory routes
   app.use("/inv", inventoryRoute);
-  console.log("Route '/inv' registered successfully"); // Log route registration
-  // File Not Found Route - must be last route in list
-app.use(async (req, res, next) => {
-  next({status: 404, message: 'Sorry, we appear to have lost that page.'})
-})
+  
 
 
 /* ***********************
@@ -47,6 +43,11 @@ app.use(async (err, req, res, next) => {
     message,
     nav
   })
+})
+
+ // File Not Found Route - must be last route in list
+ app.use(async (req, res, next) => {
+  next({status: 404, message: 'Sorry, we appear to have lost that page.'})
 })
 
 /* ***********************

@@ -148,6 +148,7 @@ footer {
   bottom: 0;
 }
 
+
 /* Mobile view */
 @media (max-width: 768px) {
   .header-top {

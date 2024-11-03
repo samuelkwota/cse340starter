@@ -11,7 +11,7 @@ Util.getNav = async function (req, res, next) {
   data.rows.forEach((row) => {
     list += "<li>"
     list +=
-      '<a href="/inv/type/#' +
+      '<a href="/inv/type/' +
       row.classification_id +
       '" title="See our inventory of ' +
       row.classification_name +
@@ -45,7 +45,7 @@ Util.buildClassificationGrid = async function(data){
         + vehicle.inv_make + ' ' + vehicle.inv_model + ' details">' 
         + vehicle.inv_make + ' ' + vehicle.inv_model + '</a>'
         grid += '</h2>'
-        grid += '<span>$' 
+        grid += '<span>' 
         + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</span>'
         grid += '</div>'
         grid += '</li>'
@@ -56,7 +56,7 @@ Util.buildClassificationGrid = async function(data){
     }
     return grid
   }
-
+  
   /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 
