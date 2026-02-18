@@ -25,8 +25,8 @@ app.use(session({
     pool,
   }),
   secret: process.env.SESSION_SECRET,
-  resave: true,
-  saveUninitialized: true,
+resave: false,
+saveUninitialized: false,
   name: 'sessionId',
 }))
 
@@ -69,14 +69,18 @@ app.use(async (err, req, res, next) => {
 
 /* ***********************
  * Local Server Information
- * Values from .env (environment) file
  *************************/
-const port = process.env.PORT
-const host = process.env.HOST
+const port = process.env.PORT || 3000
+const host = process.env.HOST || "localhost"
+
+if (!process.env.SESSION_SECRET) {
+  console.error("SESSION_SECRET is not defined in the .env file")
+  process.exit(1)
+}
 
 /* ***********************
  * Log statement to confirm server operation
  *************************/
 app.listen(port, () => {
-  console.log(`app listening on ${host}:${port}`)
+  console.log(`App listening at http://${host}:${port}`)
 })
